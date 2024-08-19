@@ -2,6 +2,8 @@ name: TorosamyElevator
 version: '2.0-SNAPSHOT'
 main: net.torosamy.torosamyElevator.TorosamyElevator
 api-version: '1.21'
+authors: [ Torosamy,yweiyang ]
+website: https://www.torosamy.net
 depend:
   - TorosamyCore
   - PlaceholderAPI

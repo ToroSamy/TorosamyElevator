@@ -30,7 +30,7 @@ class UpElevatorListener :Listener{
         for (index in min until max) {
             val tempBlock = block.getRelative(BlockFace.UP, index)
             if (tempBlock.type == Material.getMaterial(ConfigUtil.getMainConfig().enableItem)) {
-                location.y = location.y + index
+                location.y += index
                 player.teleport(location)
                 player.playSound(location, Sound.ENTITY_IRON_GOLEM_ATTACK, 20f, 20f)
                 return

@@ -1,4 +1,0 @@
-global-message:
-  no-permission: "&b[服务器娘]&c抱歉 您没有权限这么做"
-  reload-successful: "&b[服务器娘]&a重载成功!"
-  reload-help: "&b[服务器娘]&a输入/ieywy reload 重载插件哦"

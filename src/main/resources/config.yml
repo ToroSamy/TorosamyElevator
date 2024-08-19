@@ -1,5 +1,8 @@
-disable-world:
-  - zc
-  - test_world
-minDistance: 5
-maxDistance: 255
+min-distance: 5
+max-distance: 255
+#不启用的世界
+disable-worlds: []
+#不启用的玩家
+disable-players: []
+#启用的物品材质:
+enable-item: IRON_BLOCK

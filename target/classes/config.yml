@@ -1,5 +1,0 @@
-disable-world:
-  - zc
-  - test_world
-minDistance: 5
-maxDistance: 255

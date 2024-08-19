@@ -1,4 +1,3 @@
-global-message:
-  no-permission: "&b[服务器娘]&c抱歉 您没有权限这么做"
-  reload-successful: "&b[服务器娘]&a重载成功!"
-  reload-help: "&b[服务器娘]&a输入/ieywy reload 重载插件哦"
+reload-message: "&b[服务器娘]&a插件 &eTorosamyElevator &a重载成功喵~"
+toggle-open: "&b[服务器娘]&a成功 &e开启 &a方块电梯喵~"
+toggle-close: "&b[服务器娘]&a成功 &e关闭 &a方块电梯喵~"

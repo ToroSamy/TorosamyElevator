@@ -1,18 +1,7 @@
-name: IronElevatorYwY
-version: '${project.version}'
-main: net.torosamy.ironelevatorywy.IronElevatorYwY
-api-version: '1.20'
-authors: [yweiyang]
-softdepend:
+name: TorosamyElevator
+version: '2.0-SNAPSHOT'
+main: net.torosamy.torosamyElevator.TorosamyElevator
+api-version: '1.21'
+depend:
+  - TorosamyCore
   - PlaceholderAPI
-commands:
-  ieywy:
-    usage: /ieywy reload
-    permission: ironelevatorywy.reload
-permissions:
-  ironelevatorywy.use:
-    default: true
-    description: "if player can use this plugin"
-  ironelevatorywy.reload:
-    default: op
-    description: "use to reload this plugin config"

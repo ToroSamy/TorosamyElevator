@@ -1,9 +1,9 @@
+## Dependency
+- TorosamyCore
 ## Usage
-1. [Click here](https://github.com/ToroSamy/TorosamyCore) to download TorosamyCore as a dependency plugin
-2. Put the **dependencies** and this plugin into your plugins folder
-3. start your server
-4. Modify the default configuration file generated
-5. restart your server or reload this plugin
+1. download [TorosamyCore](https://github.com/ToroSamy/TorosamyCore) as a dependency plugin
+2. put the **dependencies** and this plugin into your plugins folder and start your server
+3. Modify the default configuration file generated and restart your 
 ## Permission
 - - **Usage:** /te reload
   - **Description:** reload this plugin

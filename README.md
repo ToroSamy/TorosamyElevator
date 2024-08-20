@@ -5,13 +5,12 @@
 4. Modify the default configuration file generated
 5. restart your server or reload this plugin
 ## Permission
-- **Usage:** /te reload
-  **Description:** reload this plugin
-  **Permission:** torosamyElevator.reload
-<br>
-- **Usage:** /te toggle
-  **Description:** switch the player's usage status
-  **Permission:** torosamyElevator.toggle
+- - **Usage:** /te reload
+  - **Description:** reload this plugin
+  - **Permission:** torosamyElevator.reload
+- - **Usage:** /te toggle
+  - **Description:** switch the player's usage status
+  - **Permission:** torosamyElevator.toggle
 
 ## Config
 

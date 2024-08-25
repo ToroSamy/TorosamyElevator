@@ -1,5 +1,8 @@
 ## Dependency
 - TorosamyCore
+## Function
+- Ordinary fast up and down elevators
+- Whether to enable custom switching
 ## Usage
 1. download [TorosamyCore](https://github.com/ToroSamy/TorosamyCore) as a dependency plugin
 2. put the **dependencies** and this plugin into your plugins folder and start your server
@@ -40,4 +43,4 @@ toggle-close: "&b[服务器娘]&a成功 &e关闭 &a方块电梯喵~"
 
 ## License
 
-[MIT](./LICENSE)
+[GPL-3.0 license](./LICENSE)

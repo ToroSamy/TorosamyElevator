@@ -18,18 +18,18 @@ class UpElevatorListener :Listener{
 
         if (player.isFlying) return
         if (!(event.from.y < event.to.y)) return
-        if (block.type != Material.getMaterial(ConfigUtil.getMainConfig().enableItem)) return
-        if (ConfigUtil.getMainConfig().disableWorlds.contains(location.world.name)) return
+        if (block.type != Material.getMaterial(ConfigUtil.mainConfig.enableItem)) return
+        if (ConfigUtil.mainConfig.disableWorlds.contains(location.world.name)) return
         if (!player.hasPermission("torosamyElevator.use")) return
-        if (ConfigUtil.getMainConfig().disablePlayers.contains(player.name)) return
+        if (ConfigUtil.mainConfig.disablePlayers.contains(player.name)) return
 
-        val min: Int = ConfigUtil.getMainConfig().minDistance
-        val max: Int = ConfigUtil.getMainConfig().maxDistance
+        val min: Int = ConfigUtil.mainConfig.minDistance
+        val max: Int = ConfigUtil.mainConfig.maxDistance
 
 
         for (index in min until max) {
             val tempBlock = block.getRelative(BlockFace.UP, index)
-            if (tempBlock.type == Material.getMaterial(ConfigUtil.getMainConfig().enableItem)) {
+            if (tempBlock.type == Material.getMaterial(ConfigUtil.mainConfig.enableItem)) {
                 location.y += index
                 player.teleport(location)
                 player.playSound(location, Sound.ENTITY_IRON_GOLEM_ATTACK, 20f, 20f)

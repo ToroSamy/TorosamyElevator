@@ -13,12 +13,12 @@ class PlayerCommands {
     @Permission("torosamyElevator.toggle")
     @CommandDescription("切换自己的状态")
     fun changeStatus(sender: CommandSender) {
-        if(ConfigUtil.getMainConfig().disablePlayers.contains(sender.name)) {
-            ConfigUtil.getMainConfig().disablePlayers.remove(sender.name)
-            sender.sendMessage(MessageUtil.text(ConfigUtil.getLangConfig().toggleOpen))
+        if(ConfigUtil.mainConfig.disablePlayers.contains(sender.name)) {
+            ConfigUtil.mainConfig.disablePlayers.remove(sender.name)
+            sender.sendMessage(MessageUtil.text(ConfigUtil.langConfig.toggleOpen))
             return
         }
-        ConfigUtil.getMainConfig().disablePlayers.add(sender.name)
-        sender.sendMessage(MessageUtil.text(ConfigUtil.getLangConfig().toggleClose))
+        ConfigUtil.mainConfig.disablePlayers.add(sender.name)
+        sender.sendMessage(MessageUtil.text(ConfigUtil.langConfig.toggleClose))
     }
 }

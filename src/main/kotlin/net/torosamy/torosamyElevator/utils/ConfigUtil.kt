@@ -1,6 +1,7 @@
 package net.torosamy.torosamyElevator.utils
 
-import net.torosamy.torosamyCore.manager.ConfigManager
+import net.torosamy.torosamyCore.config.Config
+import net.torosamy.torosamyCore.config.ConfigFile
 import net.torosamy.torosamyElevator.TorosamyElevator
 import net.torosamy.torosamyElevator.config.LangConfig
 import net.torosamy.torosamyElevator.config.MainConfig
@@ -8,21 +9,27 @@ import net.torosamy.torosamyElevator.config.MainConfig
 
 class ConfigUtil {
     companion object {
-        var mainConfig: MainConfig = MainConfig()
-        var langConfig: LangConfig = LangConfig()
+        private val configs: ArrayList<Config> = ArrayList()
 
-        private var mainConfigManager: ConfigManager = ConfigManager(mainConfig, TorosamyElevator.plugin,"","config.yml")
-        private var langConfigManager: ConfigManager = ConfigManager(langConfig, TorosamyElevator.plugin,"","lang.yml")
+        public var mainConfig: MainConfig = MainConfig()
+        public var langConfig: LangConfig = LangConfig()
 
+        fun initConfig() {
+            configs.clear()
+            configs.add(Config(mainConfig, ConfigFile(TorosamyElevator.plugin,"config.yml")))
+            configs.add(Config(langConfig, ConfigFile(TorosamyElevator.plugin,"lang.yml")))
+        }
 
         fun reloadConfig() {
-            mainConfigManager.load()
-            langConfigManager.load()
+            for (config in configs) {
+                config.load()
+            }
         }
 
         fun saveConfig() {
-            mainConfigManager.save()
-            langConfigManager.save()
+            for (config in configs) {
+                config.save()
+            }
         }
     }
 }

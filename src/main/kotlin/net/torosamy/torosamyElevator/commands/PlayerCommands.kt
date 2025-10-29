@@ -15,10 +15,10 @@ class PlayerCommands {
     fun changeStatus(sender: CommandSender) {
         if(ConfigUtil.mainConfig.disablePlayers.contains(sender.name)) {
             ConfigUtil.mainConfig.disablePlayers.remove(sender.name)
-            sender.sendMessage(MessageUtil.text(ConfigUtil.langConfig.toggleOpen))
+            sender.sendMessage(MessageUtil.format(ConfigUtil.langConfig.toggleOpen))
             return
         }
         ConfigUtil.mainConfig.disablePlayers.add(sender.name)
-        sender.sendMessage(MessageUtil.text(ConfigUtil.langConfig.toggleClose))
+        sender.sendMessage(MessageUtil.format(ConfigUtil.langConfig.toggleClose))
     }
 }

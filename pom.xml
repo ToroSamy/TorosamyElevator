@@ -33,7 +33,7 @@
         <dependency>
             <groupId>net.torosamy</groupId>
             <artifactId>TorosamyCore</artifactId>
-            <version>2.0-SNAPSHOT</version>
+            <version>3.0-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <dependency>

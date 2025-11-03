@@ -1,5 +1,8 @@
 package net.torosamy.torosamyElevator.listener
 
+import com.bekvon.bukkit.residence.api.ResidenceApi
+import com.bekvon.bukkit.residence.protection.ResidencePermissions
+import net.torosamy.torosamyElevator.TorosamyElevator
 import net.torosamy.torosamyElevator.utils.ConfigUtil
 import org.bukkit.Material
 import org.bukkit.Sound
@@ -22,6 +25,16 @@ class UpElevatorListener :Listener{
         if (ConfigUtil.mainConfig.disableWorlds.contains(location.world.name)) return
         if (!player.hasPermission("torosamyElevator.use")) return
         if (ConfigUtil.mainConfig.disablePlayers.contains(player.name)) return
+        
+        if (TorosamyElevator.residenceEnabled) {
+            val residence = ResidenceApi.getResidenceManager().getByLoc(location)
+            if (residence != null) {
+                val perms: ResidencePermissions = residence.permissions
+                if (!perms.playerHas(player.name, "torosamyelevator", true)) {
+                    return
+                }
+            }
+        }
 
         val min: Int = ConfigUtil.mainConfig.minDistance
         val max: Int = ConfigUtil.mainConfig.maxDistance

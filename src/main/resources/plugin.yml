@@ -6,3 +6,5 @@ authors: [ Torosamy,yweiyang ]
 website: https://www.bitlie.net
 depend:
   - TorosamyCore
+softdepend:
+  - Residence

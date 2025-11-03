@@ -1,5 +1,9 @@
 package net.torosamy.torosamyElevator
 
+import com.bekvon.bukkit.residence.Residence
+import com.bekvon.bukkit.residence.api.ResidenceApi
+import com.bekvon.bukkit.residence.containers.Flags
+import com.bekvon.bukkit.residence.protection.FlagPermissions
 import net.torosamy.torosamyCore.utils.MessageUtil
 import net.torosamy.torosamyElevator.utils.CommandUtil
 import net.torosamy.torosamyElevator.utils.ConfigUtil
@@ -9,9 +13,18 @@ import org.bukkit.plugin.java.JavaPlugin
 
 class TorosamyElevator : JavaPlugin() {
 
-    companion object{lateinit var plugin: TorosamyElevator}
+    companion object{
+        lateinit var plugin: TorosamyElevator
+        var residenceEnabled: Boolean = false
+    }
     override fun onEnable() {
         plugin = this
+
+        if (server.pluginManager.isPluginEnabled("Residence")) {
+            residenceEnabled = true
+            FlagPermissions.addFlag("torosamyelevator")
+        }
+        
         ConfigUtil.initConfig()
         ConfigUtil.reloadConfig()
 

@@ -1,9 +1,9 @@
 name: TorosamyElevator
-version: '2.0-SNAPSHOT'
-main: net.torosamy.torosamyElevator.TorosamyElevator
-api-version: '1.13'
-authors: [ Torosamy,yweiyang ]
-website: https://www.bitlie.net
+main:  net.torosamy.torosamyElevator.TorosamyElevator
+version: '${project.version}'
+author: '${plugin.yml.author}'
+website: '${plugin.yml.website}'
+api-version: '${plugin.yml.api}'
 depend:
   - TorosamyCore
 softdepend:
